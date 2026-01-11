@@ -3104,7 +3104,7 @@ Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
 EOF
 
     $STD apt -y update
-    $STD apt -y install --no-install-recommends ubuntu-drivers-common build-essential proxmox-default-headers
+    $STD apt -y install --no-install-recommends ubuntu-drivers-common build-essential dkms proxmox-default-headers
     $STD ubuntu-drivers install nvidia:535
 
     # Try version-matched install
