@@ -3095,7 +3095,7 @@ NVIDIA_PIN
     fi
 
     $STD apt -y update
-    $STD apt -y install --no-install-recommends ubuntu-drivers-common
+    $STD apt -y install --no-install-recommends ubuntu-drivers-common build-essential pve-headers-$(uname -r) linux-headers-6.17.4-2-pve
     $STD ubuntu-drivers install nvidia:535
 
     # Try version-matched install
