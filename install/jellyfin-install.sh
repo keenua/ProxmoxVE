@@ -15,6 +15,10 @@ update_os
 
 setup_hwaccel
 
+$STD apt update
+$STD apt install -y ubuntu-drivers-common
+$STD ubuntu-drivers install nvidia:535
+
 msg_info "Installing Jellyfin"
 VERSION="$(awk -F'=' '/^VERSION_CODENAME=/{ print $NF }' /etc/os-release)"
 if ! dpkg -s libjemalloc2 >/dev/null 2>&1; then
